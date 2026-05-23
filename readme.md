@@ -41,34 +41,28 @@ Get-ChildItem *.m2p | ForEach-Object {
 * **Audio:** AAC audio
 
 
----
-
 # Processing Performance
 
-# Benchmark
+## Benchmark
 
 Example production run:
 
-Video:
+- **Video Size:** 186.2 MiB
+- **Video Duration:** 16.53 minutes
 
-- Size: 186.2 MiB
-- Duration: 16.53 minutes
+### Timeline
 
-Timeline:
+| Stage | Relative Time (Minutes from Start) |
+| :--- | :--- |
+| Upload | 0.00 min |
+| Manifest Created | 0.00 min |
+| Video Indexer Processing Complete | 7.00 min |
+| Insights Downloaded | 7.00 min |
+| Frame Extraction Complete | 10.08 min |
+| Segment Analysis Complete | 43.07 min |
+| Final RAG JSON Generated | 43.95 min |
 
-| Stage | Timestamp |
-|---------|---------|
-| Upload | 13:31:02 |
-| Manifest Created | 13:31:02 |
-| Video Indexer Processing Complete | 13:38:02 |
-| Insights Downloaded | 13:38:02 |
-| Frame Extraction Complete | 13:41:07 |
-| Segment Analysis Complete | 14:14:06 |
-| Final RAG JSON Generated | 14:14:59 |
-
-Total End-to-End Time:
-
-Approximately 44 minutes
+**Total End-to-End Time:** ~44 minutes
 
 Azure Services Used:
 
@@ -152,8 +146,8 @@ Used for:
 - exception tracking
 - timeout analysis
 
-```mermaid
-graph TD
+Architecture Diagram
+
     A[input-videos/] --> B(trigger_vi)
     B --> C(Azure Video Indexer)
     C --> D(video_indexer_callback)
@@ -166,12 +160,7 @@ graph TD
     J --> K(aggregation_worker)
     K --> L[rag-database-json/]
     
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style F fill:#f9f,stroke:#333,stroke-width:2px
-    style H fill:#f9f,stroke:#333,stroke-width:2px
-    style J fill:#f9f,stroke:#333,stroke-width:2px
-    style L fill:#f9f,stroke:#333,stroke-width:2px
-
+    
     # Storage Containers
 
 ## input-videos
