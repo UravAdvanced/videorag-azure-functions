@@ -1,0 +1,16 @@
+.venv/
+.python_packages/
+.git/
+.vscode/
+__pycache__/
+*.pyc
+*.log
+local.settings.json
+manifest.json
+token.txt
+d0uy5fmt9l.json
+input-videos/
+extracted-frames/
+video-indexer-outputs/
+processing-manifests/
+rag-database-json/

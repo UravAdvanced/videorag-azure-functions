@@ -1,0 +1,18 @@
+CC BY-NC-SA 4.0
+(Attribution + NonCommercial + ShareAlike)
+
+Project Status: Complete / Archived
+
+This repository is published as a reference implementation.
+
+The project achieved its intended objectives and is being released
+for educational, research, and non-commercial use.
+
+No future development, feature additions, issue triage,
+or support is planned.
+
+Please do not open GitHub Issues requesting support,
+new features, deployment assistance, or bug fixes.
+
+You are welcome to fork and extend the project under the terms
+of the license.
